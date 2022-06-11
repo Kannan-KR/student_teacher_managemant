@@ -123,14 +123,14 @@ function AddStudent() {
 
         <Grid item sx={{ marginBottom: 4 }}>
           <Stack direction="row" spacing={1}>
-            <Button variant="contained" onClick={(e) => handleSubmit(e)}>
-              Add Student
-            </Button>
             <Button
               variant="contained"
               onClick={() => navigate("/all-students")}
             >
               Back
+            </Button>
+            <Button variant="contained" onClick={(e) => handleSubmit(e)}>
+              Add Student
             </Button>
           </Stack>
         </Grid>
