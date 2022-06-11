@@ -131,7 +131,10 @@ function AllStudents() {
                       divider={<Divider orientation="vertical" flexItem />}
                       spacing={2}
                     >
-                      <Link to={`/edit-student/${student.id}`}>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        to={`/edit-student/${student.id}`}
+                      >
                         <Button
                           variant="contained"
                           color="success"

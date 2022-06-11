@@ -16,7 +16,7 @@ function MyAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <Link to={"/"}>
+          <Link style={{ textDecoration: "none" }} to={"/"}>
             <Button
               variant="outlined"
               startIcon={<HomeIcon />}
@@ -43,7 +43,7 @@ function MyAppBar() {
             Student Teacher Management
           </Typography>
           {location.pathname === "/all-teachers" ? (
-            <Link to={"/add-teacher"}>
+            <Link style={{ textDecoration: "none" }} to={"/add-teacher"}>
               <Button
                 variant="outlined"
                 startIcon={<AddIcon />}
@@ -68,7 +68,7 @@ function MyAppBar() {
           )}
 
           {location.pathname === "/all-students" ? (
-            <Link to={"/add-student"}>
+            <Link style={{ textDecoration: "none" }} to={"/add-student"}>
               <Button
                 variant="outlined"
                 startIcon={<AddIcon />}

@@ -138,7 +138,10 @@ function AllTechers() {
                         Delete
                       </Button>
 
-                      <Link to={`/edit-teacher/${teacher.id}`}>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        to={`/edit-teacher/${teacher.id}`}
+                      >
                         <Button
                           variant="contained"
                           color="success"
