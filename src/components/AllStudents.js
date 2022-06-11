@@ -77,25 +77,25 @@ function AllStudents() {
                 Name
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Roll No
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Class
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Date of Birth
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Contact
@@ -119,39 +119,33 @@ function AllStudents() {
                   <TableCell component="th" scope="row">
                     {student.name}
                   </TableCell>
-                  <TableCell align="right">{student.rollno}</TableCell>
-                  <TableCell align="right">{student.class}</TableCell>
-                  <TableCell align="right">
+                  <TableCell align="left">{student.rollno}</TableCell>
+                  <TableCell align="left">{student.class}</TableCell>
+                  <TableCell align="left">
                     {new Date(student.dob).toLocaleDateString()}
                   </TableCell>
-                  <TableCell align="right">{student.contact}</TableCell>
+                  <TableCell align="left">{student.contact}</TableCell>
                   <TableCell>
                     <Stack
                       direction="row"
                       divider={<Divider orientation="vertical" flexItem />}
-                      spacing={2}
+                      spacing={0}
                     >
                       <Link
                         style={{ textDecoration: "none" }}
                         to={`/edit-student/${student.id}`}
                       >
                         <Button
-                          variant="contained"
                           color="success"
                           startIcon={<EditIcon />}
-                        >
-                          Edit
-                        </Button>
+                        ></Button>
                       </Link>
 
                       <Button
-                        variant="outlined"
                         color="error"
                         startIcon={<DeleteIcon />}
                         onClick={() => handleDelete(student.id)}
-                      >
-                        Delete
-                      </Button>
+                      ></Button>
                     </Stack>
                   </TableCell>
                 </TableRow>

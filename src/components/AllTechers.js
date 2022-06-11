@@ -77,25 +77,25 @@ function AllTechers() {
                 Name
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Subject
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Qualification
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Years of Experience
               </TableCell>
               <TableCell
-                align="right"
+                align="left"
                 sx={{ backgroundColor: "lightblue", fontWeight: "bold" }}
               >
                 Contact
@@ -119,37 +119,30 @@ function AllTechers() {
                   <TableCell component="th" scope="row">
                     {teacher.name}
                   </TableCell>
-                  <TableCell align="right">{teacher.subject}</TableCell>
-                  <TableCell align="right">{teacher.qualification}</TableCell>
-                  <TableCell align="right">{teacher.yearsofexp}</TableCell>
-                  <TableCell align="right">{teacher.contact}</TableCell>
+                  <TableCell align="left">{teacher.subject}</TableCell>
+                  <TableCell align="left">{teacher.qualification}</TableCell>
+                  <TableCell align="left">{teacher.yearsofexp}</TableCell>
+                  <TableCell align="left">{teacher.contact}</TableCell>
                   <TableCell>
                     <Stack
                       direction="row"
                       divider={<Divider orientation="vertical" flexItem />}
-                      spacing={2}
+                      spacing={0}
                     >
-                      <Button
-                        variant="outlined"
-                        color="error"
-                        startIcon={<DeleteIcon />}
-                        onClick={() => handleDelete(teacher.id)}
-                      >
-                        Delete
-                      </Button>
-
                       <Link
                         style={{ textDecoration: "none" }}
                         to={`/edit-teacher/${teacher.id}`}
                       >
                         <Button
-                          variant="contained"
                           color="success"
                           startIcon={<EditIcon />}
-                        >
-                          Edit
-                        </Button>
+                        ></Button>
                       </Link>
+                      <Button
+                        color="error"
+                        startIcon={<DeleteIcon />}
+                        onClick={() => handleDelete(teacher.id)}
+                      ></Button>
                     </Stack>
                   </TableCell>
                 </TableRow>
